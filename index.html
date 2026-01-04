@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>LRU Cache Visualizer</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <h1>LRU Cache Visualizer</h1>
+    <p class="subtitle">Interactive O(1) Cache • Newest on Left → Oldest on Right</p>
+
+    <div class="controls">
+        <div class="input-group">
+            <label>Capacity</label>
+            <input type="number" id="capacity" min="1" value="5">
+        </div>
+
+        <div class="input-group">
+            <label>Key</label>
+            <input type="text" id="key" placeholder="A">
+        </div>
+
+        <div class="input-group">
+            <label>Value</label>
+            <input type="text" id="value" placeholder="100">
+        </div>
+
+        <div class="buttons">
+            <button id="put">PUT</button>
+            <button id="get">GET</button>
+            <button id="reset">RESET</button>
+        </div>
+    </div>
+
+    <div id="message" class="message" aria-live="polite"></div>
+    <div id="cache-size" class="cache-size"></div>
+
+    <div class="cache-visualizer">
+        <div id="cache-display" class="cache-list"></div>
+        <div class="label lru"><span class="lru-arrow">←</span>LEAST RECENTLY USED</div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

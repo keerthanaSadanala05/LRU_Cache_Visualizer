@@ -75,8 +75,6 @@ class LRUCache {
 
 let cache = new LRUCache(5);
 
-/* ---------- UI ---------- */
-
 function renderCache(highlightKey = null, type = "") {
     const display = document.getElementById("cache-display");
     display.innerHTML = "";
@@ -105,7 +103,6 @@ function renderCache(highlightKey = null, type = "") {
         `Current Size: ${cache.map.size} / ${cache.capacity}`;
 }
 
-/* ---------- PUT ---------- */
 document.getElementById("put").onclick = () => {
     const key = document.getElementById("key").value.trim().toUpperCase();
     const value = document.getElementById("value").value.trim();
@@ -141,7 +138,6 @@ document.getElementById("put").onclick = () => {
     }
 };
 
-/* ---------- GET ---------- */
 document.getElementById("get").onclick = () => {
     const key = document.getElementById("key").value.trim().toUpperCase();
     const msg = document.getElementById("message");
@@ -164,12 +160,10 @@ document.getElementById("get").onclick = () => {
     }
 };
 
-/* ---------- RESET / RESIZE ---------- */
 document.getElementById("reset").onclick = () => {
     const cap = parseInt(document.getElementById("capacity").value) || 5;
     cache.capacity = cap;
 
-    // Clear all cache entries and reset the doubly-linked list
     cache.map.clear();
     cache.head.next = cache.tail;
     cache.tail.prev = cache.head;
@@ -181,6 +175,3 @@ document.getElementById("reset").onclick = () => {
 };
 
 renderCache();
-
-
-

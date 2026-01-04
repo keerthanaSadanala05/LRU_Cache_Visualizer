@@ -97,7 +97,6 @@ button {
     justify-content: center;
 }
 
-/* Keep the visualizer and its label on a single line and avoid wrapping */
 .cache-visualizer {
     flex-wrap: nowrap;
 }
@@ -150,7 +149,6 @@ button {
     white-space: nowrap;
 }
 
-/* Arrow before the LRU label */
 .label.lru {
     display: inline-flex;
     align-items: center;
